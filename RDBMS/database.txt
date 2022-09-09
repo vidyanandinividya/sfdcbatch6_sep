@@ -1,0 +1,116 @@
+Database
+    A Database is a collection of data stored in a format that can easily be accessed
+Any collection of related information
+    phonebook
+    shopping list
+    Todo list
+    Facebook's user base
+Database can be stored in different ways
+    on paper
+    in your mind
+    in computer
+    powerpoint
+    excel sheet
+to manage databsae, we use a software application called Database Management System (DBMS)
+
+we connect to a DBMSs and give it instructions for querying or modifying data.
+The DBMS will execute our instructions and send results back
+
+DBMS categorized into 
+    - Relational
+        we store data in tables that are lniked to each other using relationships.
+            customers
+            products
+            orders
+        SQL (Structured Query Language)
+            it is used to work with reklational Database
+            It is a language used for interacting with RDBMS.
+                create, retrieve, update & delete data
+                create and manage databsaes
+                Design and create database tables
+                perform administration tasks (security)
+
+            RDBMS
+                MySQL - open source database Apache
+                SQL Server - Microsoft
+                Oracle - Oracle
+    - non- Relational (NoSQL)
+        It stores the data in the form of Key - Value pairs
+        mongoDB
+    MySQL Communtiy Server -- Database Server
+    MySqlWorkbench - graphical UI to interact with the server
+
+    username - root
+    password - 
+    defauly port - 3306
+
+    entity --- table name
+    attributes -- column names
+
+    datatype 
+        the type of value store in particular column
+    String types
+        char(X)
+            x - number of charcaters
+        varchar(X)
+    Numerial types
+        Integer
+        TINYINT     1 byte
+        SMALLINT    2 bytes
+        MEDIUMINT   3 bytes
+        INT         4 bytes
+        BIGINT      8 bytes
+    Numeric(M,D)
+    Numeric(4,4)
+    15.50
+    15.5000
+    DATE 
+    DATETIME
+
+    SQL Statements categorized into 5 different types
+
+    DDL - Data Definition Language
+    It consists of those commands which are used to define the database.
+        CREATE 
+        DROP
+        ALTER
+        TRUNCATE
+        COMMENT
+        RENAME
+    DML - Data Manipulation language
+    It consists of those commands which deal with the manipulation of data present in the database.
+        INSERT
+        UPDATE 
+        DELETE 
+    DCL - Data Control Language 
+    These commands deal with the rights, permissions and other controls of the database System.
+        GRANT
+        REVOKE
+    TCL - Transaction Control Language
+    These commands mainly deals with the transaction of the database
+        COMMIT 
+        ROLLBACK
+        SAVEPOINT
+    DQL -Data Query Language 
+    These command use to query the data in the database
+        SELECT
+
+        28-03-1992
+
+Tables name -- products
+Attributes  product_id int(11)
+            name    varchar(50)
+            quantity_in_stock int(11)
+            unit_price decimal(4,2)
+insert at least 10 records
+
+-- Return all the products
+-- name
+-- unit price 
+-- new price (unit price * 1.1)
+
+-- return product with quantity in stock equal to 49,38,72
+
+-- get the customers whose
+    -- city contain u 
+    -- phone numbers ends with 9
