@@ -1,0 +1,342 @@
+Database
+    A Database is a collection of data stored in a format that can easily be accessed
+Any collection of related information
+    phonebook
+    shopping list
+    Todo list
+    Facebook's user base
+Database can be stored in different ways
+    on paper
+    in your mind
+    in computer
+    powerpoint
+    excel sheet
+to manage databsae, we use a software application called Database Management System (DBMS)
+
+we connect to a DBMSs and give it instructions for querying or modifying data.
+The DBMS will execute our instructions and send results back
+
+DBMS categorized into 
+    - Relational
+        we store data in tables that are lniked to each other using relationships.
+            customers
+            products
+            orders
+        SQL (Structured Query Language)
+            it is used to work with reklational Database
+            It is a language used for interacting with RDBMS.
+                create, retrieve, update & delete data
+                create and manage databsaes
+                Design and create database tables
+                perform administration tasks (security)
+
+            RDBMS
+                MySQL - open source database Apache
+                SQL Server - Microsoft
+                Oracle - Oracle
+    - non- Relational (NoSQL)
+        It stores the data in the form of Key - Value pairs
+        mongoDB
+    MySQL Communtiy Server -- Database Server
+    MySqlWorkbench - graphical UI to interact with the server
+
+    username - root
+    password - 
+    defauly port - 3306
+
+    entity --- table name
+    attributes -- column names
+
+    datatype 
+        the type of value store in particular column
+    String types
+        char(X)
+            x - number of charcaters
+        varchar(X)
+    Numerial types
+        Integer
+        TINYINT     1 byte
+        SMALLINT    2 bytes
+        MEDIUMINT   3 bytes
+        INT         4 bytes
+        BIGINT      8 bytes
+    Numeric(M,D)
+    Numeric(4,4)
+    15.50
+    15.5000
+    DATE 
+    DATETIME
+
+    SQL Statements categorized into 5 different types
+
+    DDL - Data Definition Language
+    It consists of those commands which are used to define the database.
+        CREATE 
+        DROP
+        ALTER
+        TRUNCATE
+        COMMENT
+        RENAME
+    DML - Data Manipulation language
+    It consists of those commands which deal with the manipulation of data present in the database.
+        INSERT
+        UPDATE 
+        DELETE 
+    DCL - Data Control Language 
+    These commands deal with the rights, permissions and other controls of the database System.
+        GRANT
+        REVOKE
+    TCL - Transaction Control Language
+    These commands mainly deals with the transaction of the database
+        COMMIT 
+        ROLLBACK
+        SAVEPOINT
+    DQL -Data Query Language 
+    These command use to query the data in the database
+        SELECT
+
+        28-03-1992
+
+Tables name -- products
+Attributes  product_id int(11)
+            name    varchar(50)
+            quantity_in_stock int(11)
+            unit_price decimal(4,2)
+insert at least 10 records
+
+-- Return all the products
+-- name
+-- unit price 
+-- new price (unit price * 1.1)
+
+-- return product with quantity in stock equal to 49,38,72
+
+-- get the customers whose
+    -- city contain u 
+    -- phone numbers ends with 9
+--Get the customers whose
+    --first names are elka or amber
+    --last names end with EY or ON
+    --last name start with MY or contains SE 
+    --last name contain B followed by R or U
+
+ALTER TABLE
+    This Statement is used to add a column, alter a column, rename a column,
+    drop a column and rename a table.
+
+Add new column
+    ALTER TABLE table_name
+    ADD 
+    new_column_name column_definition
+    [FIRST | AFTER column_name]
+
+Modify a column  (when the table is empty)
+    ALTER TABLE table_name
+    MODIFY column_name column_definition
+    [FIRST | AFTER column_name]
+
+Rename a column
+    ALTER TABLE table_name
+    CHANGE COLUMN original_name new_name column_definition
+    [FIRST | AFTER column_name]
+
+Drop a column   
+    ALTER TABLE table_name
+    DROP COLUMN column_name
+
+Rename table
+    ALTER TABLE table_name
+    RENAME TO new_table_name
+
+TRUNCATE  TABLE Statement
+    It allows you to delete all the data in a table
+TRUNCATE TABLE table_name
+
+Generated column
+    the data in these columns are computed based on predefined expressions
+
+INSERT INTO SELECT
+
+    INSERT INTO table_name(c1,c2,....)
+    VALUES(v1,v2,.......)
+
+    INSERT INTO table_name(column_list)
+    SELECT
+        select_list
+    FROM 
+        another_table
+    WHERE
+        condition
+
+UPDATE Statement
+    It updates data in a table.
+    It allows you to change the values in one or more columns of a single row or multiple rows.
+
+UPDATE table_name
+SET 
+    column_name1=expr1,
+    column_name2=expr2,
+    .....
+[WHERE condition]
+
+DELETE Statement
+    It is used to delete data from a table
+
+DELETE FROM table_name
+WHERE condition
+
+Constraints
+    NOT NULL
+        It is a column constraint that ensures values stored in a column are not null.
+    column_nmae data_type NOT NULL
+
+    ALTER TABLE table_name
+    CHANGE
+        old_column_name
+        new_column_nmae column_definition
+
+    Primary Key
+        not null + unique
+    It is a column or set of columns that uniquely identifies each row in the table.
+        A primary key must conatin unique values.
+        if the primary key consists of multiple columns, the combination of values in these columns must be unique.
+        A primary key cannnot have null values.
+        A table can have only one primary key.
+        A primary key column often has the AUTO_INCREMENT attribute that automatically generates a sequential integre whenever you insert a new row into the table.
+    CREATE TABLE table_name(
+    primary_key_column datatype PRIMARY KEY,
+    .......);
+
+    CREATE TABLE table_name(
+    primary_key_column datatype,
+    primary_key_column datatype,
+    ........
+    PRIMARY KEY(primary_key_column));
+
+    Foreign Key
+    It is a column or group of columns in a table that links to a column or group of columns in another table.
+
+    customers  --parent table / referenced table
+        *customerId  -- primary key
+        customerName
+        phone
+        address
+        country
+
+    orders  -- child table / referencing table
+        *orderNumber -- primary key
+        orderDate
+        requiredDate
+        ShippedDate
+        status
+        comments
+        customerId -- Foreign Key
+
+Typically, the foreign key columns of the child table often referes to the primary key of the parent table.
+A table can have more than one foreign key where each foreign key references to a primary key of the different parent tables
+
+[CONSTRAINT constraint_name]
+FOREIGN KEY [foreign_key_name] (column_name,...)
+REFERENCES parent_table(column_name,....)
+[ON DELETE referenceoption]
+[ON UPDATE referenceoption]
+
+    Unique Constratint
+        t is an integrity constarint that ensures values in a column or group of columns to be unique.
+    
+    CREATE TABLE table_name(
+        ......,
+        column_name data_type UNIQUE,
+        .......
+    );
+    Check Constraint
+    It is used to apply user defined constraint
+    [CONSTRINT [constraint_name]] CHECK (expression)[[NOT]ENFORCED]
+
+    MySQL Functions
+        String Functions
+            CONCAT -Concatenate two or more strings into a single string
+            INSTR - return the position of the first occurance of a substring in a string
+            LENGTH - get the length of the string in bytes and in charcaters
+            LEFT - Get the specified number of leftmost characters from a string
+            RIGHT- Get the specified number of rightmost characters from a string
+            LOWER - convert a string to lowercase
+            UPPER - convert a string to uppercase
+            REPLACE - search and replace a substring in a string
+            REPLACE(str,old_string,new_string)
+            SUBSTRING - Extract a substring starting from a position with a specific length.
+        Aggregate Functions
+            AVG()
+                calculates the average value of a set of values.
+                it ignores NULL in the calculation
+            COUNT()
+                returns the number of values in a set
+            MIN()
+                calculates the minimum value in a set
+            MAX()
+                calculates the maximum value in a set
+            SUM()
+                returns the sym of values in a set
+GROUP BY 
+    It groups a set of rows into a set of summary rows by values of columns or expressions.
+    It returns one row for each group.
+HAVING 
+    SELECT column_name
+    FROM table_name
+    WHERE condition
+    GROUP BY column_name
+    HAVING condition
+    ORDER BY column_name
+        DATE Functions
+        CURDATE
+        ADDDATE
+        DATEDIFF
+            it calculates the number of dates between two dates
+        DAY 
+            it returns the day of the month
+        DATE_ADD 
+            it will adds an interval to a DATE or DATETIME value
+        DATE_SUB 
+        DAYNAME
+        DAYOFWEEK 
+        LAST_DAY
+        NOW 
+        MONTH
+        SYSDATE
+        STR_TO_DATE
+        WEEK 
+        WEEKDAY 
+        YEAR 
+JOIN 
+    A join is a method of linking data between one or more tables based on values of the common column between the tables.
+Inner join
+    SELECT column_list
+    FROM table_1
+    INNER JOIN table_2 ON join_condition
+
+Left join
+    it selects all data from the left table whether there are matching rows exists in the right table or not.
+    SELECT column_list
+    FROM table_1
+    LEFT JOIN table_2 ON join_condition
+Right join
+    it selects all data from the right table whether there are matching rows exists in the left table or not.
+    SELECT column_list
+    FROM table_1
+    RIGHT JOIN table_2 ON join_condition
+Cross join
+    it makes a cartesian product of rows from the joined tables.
+    it combines each row from the first table with every row from the right tabale to make the result set.
+    SELECT column_list
+    FROM table_1
+    CROSS JOIN table_2
+    It is useful for generating planning data.
+Self join   
+    It is used to query hierarchial data or to compare a row with other rows within the same table
+Subquery
+    It is a query nested within another query
+    subquery is called an inner query and the query that contains the subquery is called an outer query.
+    standalone subquery
+        the inner query executes first and the result used in the outer query
+    corelated subquery
+        uses the data from the outer query. it is evaluated once for each row in the outer query
