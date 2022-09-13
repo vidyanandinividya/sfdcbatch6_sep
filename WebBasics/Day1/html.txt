@@ -1,0 +1,95 @@
+HTML
+    for designing and structure of the web page
+    HyperText Markup Language
+    HyperText -- Link between web pages
+    Markup Language - Text between tags which defines structure
+    It is used to create web pages
+    It forms or defines the structure of web page
+    to save html file use .html extension
+
+    Notepad++
+    Bracket
+    SublimeText
+    VS code
+HTML Element
+    An HTML element is an individual component of an HTML document.
+To generate Skeleton in VS Code 
+    !+Enter
+Headings
+    used in definig hierarchy and the structure of the web page content
+    <h1> through <h6>
+Paragraphs
+    It is used to publish text on the web page
+<br> -- is used to insert a line break on the web page
+<hr> -- It is used to  create horizontal rules or lines to visually separate content sections on a web page.
+&nbsp -- for creating extra consecutive spaces
+<pre> -- it is used to display spaces, tabs, line breaks
+
+Non Semantic tags
+    <span> -- inline container
+    it has no default style 
+    if you needed to group texts that you want to keep together inline
+    <div> -- block container
+    by using this tag we can group a lot of tags together to make up a section of the website
+HTML Links
+    A link or hyperlink is a connection from one web resource to another.
+    href -- this specifies the target of the link.
+    target -- it tells the browser where to open the linked document.
+
+        _blank - opens the link document in a new window or tab
+        _parent - in parent window
+        _self - in same window
+        _top - in the full browser window
+
+HTML -- to create content for the web page
+CSS -- to style the content on the web page
+JS -- to interact with the content
+Foramtting tags
+
+CSS types
+    inline styles -- using style attribute in the HTML start tag
+    Embedded styles -- using the <style> element in the head section of the document
+    External styles -- using the <link> element, pointing to an external css files.
+HTML Tables
+    It allows you to arrange data into rows and columns.
+    <table>
+
+    </table>
+cellpadding-- it specifies the space between the border of a table cell and its content.
+
+cellspacing-- it specifies the space between the cells
+
+List
+    it is used to represent list of information in a well formed and semantic way.
+
+    Unordered List - used to create a list of related items , in no particular order
+    Ordered List - used to create a list of related items, in a specific order
+    Description List - used to create a list of terms and their description
+
+Website Layouts
+    Creating website layout is the activity of postioning the various elements that mnake a web page in a well-structured manner
+
+    Table based Layout
+    Div based Layout
+    HTML5 structural elements base layout
+HTML forms
+    These are required to collect different kinds of user inputs.
+Form Input Controls
+    Text Field
+        These are one line areas that allow the user to input text
+    Password Field
+        These are similar to text fields. 
+        The only difference is charcaters in a password field are masked.
+    Radio button
+        These are used to let the user select exactly one option from a pre defined set of options
+    Checkboxes
+        It allows the user to select one or more options from a pre-defined set of options.
+    File Select box
+        It allows the user to browse for a local file and send it as an attachment with the form data
+    Submit and Reset buttons
+        Submit button is used to send the form data to a web server
+        Reset button is used to reset all the form fields to default values
+    Textarea
+        It is a multiple-line text input control 
+    Select box
+        it is a dropdown list of options
