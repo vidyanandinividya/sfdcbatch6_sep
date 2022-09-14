@@ -1,0 +1,86 @@
+Audio
+    <audio> element provides a standard way to embed audio in web pages.
+Video
+    <video> element provides a standard way to embed video in  web pages.
+    <embed> is used to embed multimedia content into an hTML document
+hTML Images
+    <img> is used to insert images in the HTML document
+HTML iFrame
+    <iframe>
+
+CSS - Cascading Style Sheet
+
+@import 
+    It is another way of loading an external style sheet.
+    It must occurs at the start of the style sheet
+
+    h1 {color:blue; text-align:center;}
+
+    h1 -- selector
+
+    Declaration -- color:blue;
+
+    property - color
+    value - blue
+    Each declaration consists of property and a value separated by a colon (:) and ending with a semicolon (;), and declaration groups are surrounded by curly braces {}
+
+    selectors
+        it is a pattern to match the elements on a web page.
+        The style rules associated with that selector will be applied to the elements that match the selector pattern
+
+        Universal selector
+            It is denoted by an asterisk(*), matches every single element on the page.
+            This selector is often used to remove the default margins and paddings from the elements
+        Element selector
+            It matches all instance of the element in the document with the corresponding element name
+        Id selector
+            It is used to define style rules for a single or unique element
+            It is defined with a hash sign (#) immediately folowed by the id value
+        Class selector
+            It can be used to select any HTML element that has a class attribute.
+            All the elements having that class will be formatted according to the defined rule.
+            It is defined with a period sign(.) immediately followed by the class value
+        Descendent selector
+            when you need to select an element that is the descendent of another element.
+        Child selector
+            It is used to select only those elements that are direct children of some element.
+            It is made up of two or more selectors separated by a greater than symbol (>)
+        Adjacent Sibling selector
+            It can be used to select sibling elements
+            This selector has the syntax like : E1+E2, where E2 is the target of the selector
+        General Sibling selector
+            It is similar to the adjacent selector but it is less strict.
+            this selector is made up of two simple selectors separated by the tilde(~) character.
+            E1 ~ E2, where E2 is the target of the selector
+        Grouping selector
+            when several selectors share the same style rules you can group them into a comma-separated list to minimize the cod
+Pseudo class    
+    allows to style the dynamic state of an element such as hover, active and focus state.
+Pseudo element  
+    it allows to style the elements or parts of the elements without adding any IDs or classes to them.
+CSS color
+    The color property defines the text color (foreground color in general) of an element
+
+    a color keyword - like "red", "green", etc
+    a HEX value - "#000000", etc
+    an RGB value - "rgb(255,0,0)" etc
+
+    #ffffff
+    #fff
+    #00ff00
+    #0f0
+CSS Background
+
+Box Model
+    Every element that can be displayed on a web page is comprised of one or more rectangular boxes.
+    Box model typically describes how these rectangular boxes are laid out on a web page.
+    every box has a content area and optionally surrounding padding, border and margin areas.
+
+    padding 
+        It is the transparent space between the element's content and its border
+    margin
+        It is the transparent space around the border.
+    box-sizing
+        This property alter the default CSS box model in such a way that, any padding or border specified on the element is laid out and drawn inside of the content area.
+Flex Layout Model
+    It is used for creating user interface design with multiple rows and columns without using the percentage or fixed length values

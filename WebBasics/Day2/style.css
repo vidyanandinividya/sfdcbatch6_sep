@@ -1,0 +1,81 @@
+/*
+*
+{
+    margin: 0;
+    padding: 0;
+}*/
+p
+{
+    color: blue;
+}
+#p1
+{
+    color: red;
+}
+p.green
+{
+    color: green;
+}
+ul.menu
+{
+    padding: 0;
+    list-style: none;
+}
+ul.menu li
+{
+    display: inline;
+}
+
+/*
+The style rules applies to only those <a> elements that contained inside an <ul> element having the class .menu, and has no effect on other links iinside the document
+*/
+
+ul.menu li a
+{
+    margin: 10px;
+    text-decoration: none;
+    color: lightblue;
+}
+ul > li
+{
+    list-style: square;
+}
+ul > li  ol
+{
+    list-style: none;
+}
+/*h1 + p
+{
+    color: red;
+    font-size: 18px;
+}
+ul.task + p
+{
+    color: lightpink;
+    text-indent: 30px;
+}*/
+h1 ~ p
+{
+    color: blue;
+    font-size: 18px;
+}
+ul.task ~ p
+{
+    color: green;
+    text-indent: 28px;
+}
+h3,h4,h5
+{
+    color: brown;
+    text-indent: 18px;
+    text-align: right;
+}
+/*Attribut Selector*/
+input[type="text"]
+{
+    border: 1px solid red;
+}
+input[type="submit"]
+{
+    border: 1px solid green;
+}
