@@ -1,0 +1,80 @@
+JavaScript
+    It is a high-level object-oriented, multi-paradigm programming language
+
+    high level - no need to worry about complex stuff like memory management
+
+    object-oriented - based on objects for storing most kinds of data
+
+    multi-paradigm - we can use different styles of programming
+
+    <script> 
+    Data Types
+        Number - Floating point numbers - used for deciamls and integers
+        String - Sequence of characters used for text
+        Boolean - Logical type that can only be true or false used for taking decissions
+        undefined - value taken by a variable that is not defined ('empty value')
+        Null - also means empty value
+        BigInt - larger integers than number type can hold
+    const 
+        variables declared with const maintain constant values.
+        These values cannot be updated or re-declared
+    var 
+        var declarations are globally scoped 
+    let 
+        it is block scoped 
+        a variable declared with let is only available for use within that block
+        These variables can not be redeclared
+CC #1
+    Mark and John are trying to comapre their BMI (Body Mass Index), which is calculated using the formula: BMI = mass/height **2 
+    mas/(height*height). (mass in kg and height in meter)
+
+    1. store Mark's and John's mass and height in variables
+    2. calculate both their BMIs using the formula 
+    3. Create a boolean variable 'markHigherBMI' containing information about whether Mark has a higher BMI than John.
+    Sample Date 
+        Test1: Mark wiight : 78 height : 1.69 John weight: 92 height: 1.95
+        Test2: Mark wiight : 95 height : 1.88 John weight: 85 height: 1.76
+CC #2
+    use the BMI code from CC#1 and improve it,
+    1. print a nice output to the console, saying who has the higher BMI. The message can be either "Mark's BMI is higher that John's !" or "John's BMI is higher than Mark's"
+    2. use a template literal to include BMI values in the output. 
+    Example: "Mark's BMI (28.3) is higher than John's (23.9) !"
+== (loose) and === (strict)
+Function
+    It is a set of statements that perform a task or calculate a value
+
+    Function declaration
+        function that can be used before it's declared
+    Function expression
+        essentially a function value stored in a variable
+    Arrow function
+        Great for a quick one-line function
+        (parameters)=>{expression}
+Array
+
+what JavaScript can do with webpages
+    you can access the web page elements using JS programs
+    you can change the content of the webpage elements dynamically
+DOM 
+    Document Object Model
+    It is structured representation of HTML elements as an Object
+    it resides in the global object known as window
+getElementById()
+    it returns a webpage element that has the id attribute same as the id value specified in getElementById() method
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Page</title>
+</head>
+<body>
+    <h1>Mobile OS</h1>
+    <ul>
+        <li>Android</li>
+        <li>iOS</li>
+    </ul>
+</body>
+</html>
+Document - <html> --- <head> -- <title> --> My Page
+                  --- <body> -- <h1> --> Mobile OS
+                             -- <ul> -- li -> Android
+                                     -- li -> iOS
