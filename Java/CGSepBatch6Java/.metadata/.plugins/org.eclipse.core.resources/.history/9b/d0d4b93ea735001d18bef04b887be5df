@@ -1,0 +1,16 @@
+package session1.oops;
+
+public class Person {
+	private String name;
+	int age;
+	public Person(int age, String name)
+	{
+		this.age=age;
+		this.name=name;
+	}
+	public void printPerson()
+	{
+		System.out.println(this.name + " "+ this.age);
+	}
+
+}

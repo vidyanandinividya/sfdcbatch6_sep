@@ -1,0 +1,12 @@
+package session1.oops;
+
+public class PersonList {
+
+	public static void main(String[] args) {
+		Person john=new Person(32,"john");
+		System.out.println(john.age);
+		System.out.println(john.name);
+
+	}
+
+}

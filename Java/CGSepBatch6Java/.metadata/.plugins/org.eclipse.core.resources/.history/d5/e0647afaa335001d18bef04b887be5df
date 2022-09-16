@@ -1,0 +1,7 @@
+package session1.oops;
+
+public class Person {
+	String name;
+	int age;
+
+}

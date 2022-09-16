@@ -1,0 +1,95 @@
+JDK 8
+ command prompt - 
+ java --varsion
+IDE 
+    Eclipse
+    Netbeans
+    Intelj
+    VSCode
+variable and data type
+    variable is created to store the value
+
+Data type is a classification of data .
+primitive 
+    byte
+    short
+    int 
+    int age=32
+    long
+    float
+    double 
+    char
+    boolean
+reference
+    Array
+    String
+    Interface
+valid 
+    age
+    $age
+    age_john
+    age12
+Not valid
+    age joh 
+    12age
+    age!
+    12
+Input
+    refers to the text written by the user read by the program.
+    input is always read as a string.
+Object
+    example
+    example extends Object
+conditional statement
+    if 
+    if else 
+    if else if else 
+Loop
+    a loop consists of an expression that determines whether or not the code within the loop should be repeated, along with a block containing the source code to be repeated.
+
+    while  - infine loop
+    do while -- infine loop
+    for  - finite loop
+CC#1
+    write a program which reads numbers from the user until the user writes 0.
+    Then the program prints the number of positive and negative numbers and the percentage of positive numbers from all negative numbers given.
+Array
+    It is a collection of similar type of element
+    Size of the array = the number of elements in the array
+    The values in an Array are called element
+    Array always start from index 0
+    int[] numbers = new int[5]; //this array will hold five integers
+    numbers[0] =23
+    numbers[1]=2
+    String[] names=new String[3] //this array will hold three strings
+CC#2
+    check whether the given array is sorted in ascending order or not
+        if the array is null or has only one element then array is already sorted
+
+Classes and Objects
+    class 
+        it defines the attributes of objects.
+            -- instance variables
+            -- instance methods
+                it is a piece of source code written inside a class that's been names and has the ability to be called.
+    object 
+        it is an instance of class
+        it is always instanciated by calling a method that created an object i.e. constructor by using new keyword
+
+        class Employee{}
+
+        Employee emp=new Employee();
+    constructor
+        it is used to allocate memory at run time
+
+        default constructor
+            if the programmer does not define a constructor for a class, java automatically creates a default one for it.
+            if a constructor has been defined for a class, no default constructor exists.
+    Access Specifiers
+            default -- package level
+            public  -- universal
+            private -- limited to that class 
+            protected -- accessible to only the child of the class
+            class must not be private or protected
+    toString()
+        the string representation of an object

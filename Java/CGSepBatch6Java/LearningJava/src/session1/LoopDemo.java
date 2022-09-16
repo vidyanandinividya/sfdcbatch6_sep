@@ -1,0 +1,52 @@
+package session1;
+
+import java.util.Scanner;
+
+public class LoopDemo {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		/*while(true)
+		{
+			System.out.println("Exit?(y exists)");
+			String input=sc.nextLine();
+			if(input.equals("y"))
+			{
+				break;
+			}
+			System.out.println("Ok! Let's carry on");
+		}
+		System.out.println("Ready");*/
+		//calculate the number of 1 entered by the user
+		//the task is to keep count of number ones
+		/*int count=0;
+		while(true)
+		{
+			
+			
+			System.out.println("Enter a number (0 to exists)");
+			int number=sc.nextInt();
+			//The task is to exit the loop if the user has inputed 0
+			if(number==0)
+			{
+				break;
+			}
+			//The task is to count number of one's
+			if(number==1)
+			{
+				count+=1;
+			}
+			
+		}
+		//The task is to print the total number of ones
+		System.out.println("The total number of ones is:"+count);*/
+		//Calculate the sum of first 10 numbers
+		int sum=0;
+		for(int i=1;i<=10;i++)
+		{
+			sum+=i;
+		}
+		System.out.println("The sum is:"+sum);
+	}
+
+}

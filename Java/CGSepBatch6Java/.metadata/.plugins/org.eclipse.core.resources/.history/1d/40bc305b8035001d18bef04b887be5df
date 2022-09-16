@@ -1,0 +1,22 @@
+package session1;
+
+import java.util.Scanner;
+
+public class LoopDemo {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		while(true)
+		{
+			System.out.println("Exit?(y exists)");
+			String input=sc.nextLine();
+			if(input.equals("y"))
+			{
+				break;
+			}
+			System.out.println("Ok! Let's carry on");
+		}
+		System.out.println("Ready");
+	}
+
+}

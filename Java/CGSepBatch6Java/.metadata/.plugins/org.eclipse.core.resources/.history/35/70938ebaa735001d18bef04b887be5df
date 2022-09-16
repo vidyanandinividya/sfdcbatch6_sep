@@ -1,0 +1,10 @@
+package session1.oops;
+
+public class Person {
+	private String name;
+	private int age;
+	private int weight;
+	private int height;
+	
+
+}
