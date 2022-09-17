@@ -5,4 +5,12 @@
     <fullyQualifiedTypeName name="package1.class2"/>
     <fullyQualifiedTypeName name="package1.class1"/>
     <fullyQualifiedTypeName name="session1.oops.Person"/>
+    <fullyQualifiedTypeName name="session2.association.Sportsperson"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="session2.association.Organization"/>
+    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="session2.polymorphism.ArithmeticOperation"/>
+    <fullyQualifiedTypeName name="session2.polymorphism.Employee"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
 </qualifiedTypeNameHistroy>

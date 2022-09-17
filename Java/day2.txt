@@ -1,0 +1,123 @@
+OOPS Concept
+    Encapsulation
+        It is the process by which data(variables) and the code that acts upon them(methods) are integrated as a single unit.
+        By encapsulating a class's variables, other classes can not access them, and only the methods of the class can access them.
+        - Better control
+        - Getter and Setter
+        - Security
+        - Flexibility
+    Inheritance 
+        In inheritance relationship, a class can access fields and methods of an existing class.
+
+        Existing class is known as base / parent / super class
+        The class who access the features i.e. fields and methods of a base class is known as sub / derived /child class.
+
+        Class A{}
+        Class B extends A{}
+
+        Types of Inheritance
+            Single Inheritance
+                There should be one base class and one child class
+            Multilevel Inheritance
+                In multilvel inheritance, a class is derived from another class which is also derived from some other class
+            Class A {}
+            Class B extends A {}
+            Class C extends B {}
+            Hierarchial Inheritance
+                There can be multiple sub class for one base class
+            Hybrid Inheritance
+                In this we use mixed of different types of inheritance relationship.
+            Multiple Inheritance    
+                Iin this relationship, the derived class derived from multiple base class
+            Class A {}
+            Class B {}
+            Class C extends A , B {}
+            Multiple inheritance can be implemented using interface not classes
+        Advantage
+            Code reusability
+        Every Java class extends the class Object, which means that every class we create has its disposal all methods defined in the Object class.
+        we use the extends keyword to inherit the properties of a class.
+        Inheritance -- Is-A relationship
+        child class can inherit all the pri=operties from the base class except constructor.
+        The super call bears same resemblance to the this call in a constructor, this is used to call a constructor of this class, while super is used to call a constructor of the superclass.
+        you can call the methods defined in the superclass by prefixing the call with super keyword.
+
+    Misusing Inheritance
+        Let's consider a Postal service and some related class.
+            Customer
+                includes the information related to a customer
+            Order
+                includes the information about the ordered item by the customer
+            Order has a Customer 
+    When inheriting, the sub class must be a special case of the super class.
+    Association 
+    in Java, it is the relationship that can be establihed between any two classes.
+        one-to-one 
+        one-to-many
+        many-to-one
+        many-to-many
+    There are two forms of Association
+        IS - A (Inheritance)
+        HAS - A (association)
+            - Aggregation
+            It is a relatively more loosely coupled relation than composition,
+            although both classes are associated with each other, one can exist without other independently
+            It is also called weak association
+            It is also known as unidirectional association
+            Association between Country and Sportsperson
+            Country class is defined with a name and other attributes like size, population, capital etc, and a list of all the sportspersons that come from it
+            Sportsperson class is defined with a name and other attributes like age , height, weight etc.
+
+
+            - Composition
+            It is a form of relation that is more tightly coupled.
+            It is also called strong association
+            It is also know as Belongs-To association
+            In this association, the classes cannot exist independent of each other.
+            If the larger class which holds the object of the smaller class is removed, it is also means logically the smaller class cannot exist.
+            Association between Organization and Employee
+            Organization class is defined with name and the list of employees that are employed in it.
+            Employee class is defined with name and the organization he/she is working at.
+
+    Polymorphism
+        It is a concept where one name can have many forms
+        It is just the ability of a method to behave differntly at different situation, and this is actually achieved by Method Overloading or by Method Overriding
+        Example:
+         getArea(int radius) {return 3.14*radius*radius} 
+            used to calculate area of Circle
+         getArea(int length,int breadth){return length*breadth}
+            used to calculate area of Rectangle
+        getArea() -By looking at this name, you will come to know that the method is used to calculate area.
+        Area of what that will not come to know
+        After looking at parameters, you will exactly come to know that,
+            1. first method is used to calculate the area of Circle
+            2. second method is used to calculate the area of Rectangle
+        
+    Types of Polymorphism
+        Static Polymorphism / Static Binding / Compile time Polymorphism 
+            any method call which is resolved at COMPILER level is called static polymorphism 
+            Method Overloading
+                if a class have multiple methods with the same name but with different parameter list, it is known as Method Overloading
+                parameter lists should differ in either
+                    1. Number of parameters
+                    2. Data type of parameters
+                    3. Sequence of data type of parameters
+                It increases the readability of the program
+        Dynamic Polymorphism / Dynamic Binding / Run time Polymorphism
+            any method call which is resolved at JVM level is called dynamic polymorphism
+            Method overriding
+                in case of inheritance , where parent-child relationship exist
+            parent class defines a method say connect() 
+                    which does connection to some remote service
+            Child class has a better way to do connection than parent class and don't want to use Parent class connect() method.
+                So , it overrides Parent's class connect() method by providing own implemenation of connect() method.
+            Now whenever connect() method is called using child class object then connect() method of child class will be called and not the connect() method of Parent class.
+            This is called method overriding
+
+            parameters that need to be consider in case of method overriding
+                1. Access specifier of method
+                2. Return type of the method
+                3. Name of a method
+                4. Arguments/ parameters of method
+                5. Exception that method throws
+    Abstraction

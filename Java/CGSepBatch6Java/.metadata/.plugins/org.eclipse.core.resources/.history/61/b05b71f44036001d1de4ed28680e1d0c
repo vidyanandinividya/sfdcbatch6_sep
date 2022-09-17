@@ -1,0 +1,11 @@
+package session2.inheritance;
+
+public class InheritanceDemo {
+
+	public static void main(String[] args) {
+		Engine engine=new Engine("hz","volkswagan","VW 1L 86-91","hybrid");
+		System.out.println(engine.getEngineType());
+		System.out.println(engine.getIdentifier());
+	}
+
+}

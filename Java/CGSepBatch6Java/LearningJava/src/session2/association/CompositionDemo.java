@@ -1,0 +1,71 @@
+package session2.association;
+
+import java.util.ArrayList;
+import java.util.List;
+
+class Employee
+{
+	private String empName;
+
+	public Employee(String empName) {
+		super();
+		this.empName = empName;
+	}
+
+	public String getEmpName() {
+		return empName;
+	}
+	
+}
+class Organization
+{
+	private String orgName;
+	//Composition
+	ArrayList<Employee> employeeList;
+	public Organization(String orgName) {
+		super();
+		this.orgName = orgName;
+	}
+	public String getOrgName() {
+		return orgName;
+	}
+	public List<String> getEmployeeList() {
+		List<Employee> employees=this.employeeList;
+		List<String> names=new ArrayList<>();
+		for(Employee emp:employees)
+		{
+			names.add(emp.getEmpName());
+		}
+		return names;
+	}
+	public void setEmployeeList() {
+		//create Employee objects
+		Employee john=new Employee("John");
+		Employee annie=new Employee("Annie");
+		Employee hary=new Employee("Hary");
+		Employee james=new Employee("James");
+		ArrayList<Employee> empList=new ArrayList<>();
+		empList.add(john);
+		empList.add(annie);
+		empList.add(james);
+		empList.add(hary);
+		this.employeeList=empList;
+		
+		
+	}
+	
+}
+public class CompositionDemo {
+
+	public static void main(String[] args) {
+		//Create an organization
+		Organization capgem=new Organization("CapGemini");
+		//set the Employee List in Organization class
+		capgem.setEmployeeList();
+		//Display the Has-a association (Composition) between organization and employee
+		System.out.println("The Employee working in:"+capgem.getOrgName() +
+				"  organization are "+ capgem.getEmployeeList());
+
+	}
+
+}

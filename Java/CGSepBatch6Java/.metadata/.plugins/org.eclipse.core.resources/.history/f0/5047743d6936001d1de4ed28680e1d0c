@@ -1,0 +1,33 @@
+package session2.polymorphism;
+
+class Parent
+{
+	public void doSomething()
+	{
+		System.out.println("Doing something in parent class");
+	}
+	public void fn1()
+	{
+		System.out.println("Parent Class Function");
+	}
+}
+class Child extends Parent
+{
+	public void fn2()
+	{
+		System.out.println("Child class Function");
+	}
+	@Override
+	public void doSomething() {
+		System.out.println("Doing something in Child Class");
+	}
+}
+public class MethodOverridingDemo {
+
+	public static void main(String[] args) {
+		Child c-=new Child();
+		c.doSomething();
+
+	}
+
+}

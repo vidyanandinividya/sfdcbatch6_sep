@@ -1,0 +1,53 @@
+package session2.association;
+
+import java.util.ArrayList;
+import java.util.List;
+
+class Employee
+{
+	private String empName;
+
+	public Employee(String empName) {
+		super();
+		this.empName = empName;
+	}
+
+	public String getEmpName() {
+		return empName;
+	}
+	
+}
+class Organization
+{
+	private String orgName;
+	//Composition
+	ArrayList<Employee> employeeList;
+	public Organization(String orgName) {
+		super();
+		this.orgName = orgName;
+	}
+	public String getOrgName() {
+		return orgName;
+	}
+	public ArrayList<String> getEmployeeList() {
+		List<Employee> employees=this.employeeList;
+		List<String> names=new ArrayList<>();
+		for(Employee emp:employees)
+		{
+			names.add(emp.getEmpName());
+		}
+		return names;
+	}
+	public void setEmployeeList(ArrayList<Employee> employeeList) {
+		this.employeeList = employeeList;
+	}
+	
+}
+public class CompositionDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

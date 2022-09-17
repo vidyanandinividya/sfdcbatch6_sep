@@ -1,0 +1,28 @@
+package session2.inheritance;
+
+public class Engine {
+	private String engineType;
+	private String identifier;
+	private String manufacturer;
+	private String description;
+	public Engine(String engineType, String identifier, String manufacturer, String description) {
+		super();
+		this.engineType = engineType;
+		this.identifier = identifier;
+		this.manufacturer = manufacturer;
+		this.description = description;
+	}
+	public String getEngineType() {
+		return engineType;
+	}
+	public String getIdentifier() {
+		return identifier;
+	}
+	public String getManufacturer() {
+		return manufacturer;
+	}
+	public String getDescription() {
+		return description;
+	}
+	
+}
