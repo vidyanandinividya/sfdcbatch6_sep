@@ -1,0 +1,13 @@
+package session3;
+
+public class AbstractClassDemo {
+
+	public static void main(String[] args) {
+		SMSSender airtel=new Airtel();
+		airtel.sendSMS();
+		SMSSender vodafone=new Vodafone();
+		vodafone.sendSMS();
+		
+	}
+
+}

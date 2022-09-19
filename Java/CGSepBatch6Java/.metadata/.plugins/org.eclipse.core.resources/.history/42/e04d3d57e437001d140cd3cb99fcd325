@@ -1,0 +1,29 @@
+package session3;
+interface MyInterface
+{
+	void existingMethod(String str);
+}
+interface MyInterface2
+{
+	void disp(String str);
+}
+public class MultiplrInterfaceDemo implements MyInterface,MyInterface2{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void disp(String str) {
+		System.out.println("Display String is :"+str);
+		
+	}
+
+	@Override
+	public void existingMethod(String str) {
+		System.out.println("STring is :"+str);
+		
+	}
+
+}

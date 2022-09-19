@@ -1,0 +1,31 @@
+package session3.exception;
+
+class InvalidProductException extends Exception
+{
+
+	public InvalidProductException(String message) {
+		super(message);
+		
+	}
+	
+}
+public class CustomExceptionDemo {
+
+	public static void main(String[] args) throws InvalidProductException  {
+		CustomExceptionDemo ce=new CustomExceptionDemo();
+		ce.productCheck(45);
+
+	}
+	void productCheck(int weight) throws InvalidProductException
+	{
+		if(weight<100)
+		{
+			throw new InvalidProductException("Product Invalid");
+		}
+		else
+		{
+			System.out.println("Product is Valid");
+		}
+	}
+
+}

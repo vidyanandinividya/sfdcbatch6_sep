@@ -1,0 +1,44 @@
+package session3.exception;
+
+public class MultipleCatchDemo {
+
+	public static void main(String[] args) {
+		try //parent try block
+		{
+			try //child try block
+			{
+				System.out.println("Inside Block1");
+				int b=45/0;
+				System.out.println(b);
+			}
+			catch(ArithmeticException ae)
+			{
+				System.out.println("Exception:"+ae);
+			}
+			try //child try block
+			{
+				System.out.println("Inside block2");
+				int arr[]=new int[3];
+				System.out.println(arr[4]);
+				
+			}
+			catch(ArrayIndexOutOfBoundsException ai)
+			{
+				System.out.println("Exception: "+ai);
+			}
+			System.out.println("Just another statement");
+		}
+		catch(ArithmeticException ae)
+		{
+			System.out.println("Inside parent try block:"+ae);
+		}
+		catch(ArrayIndexOutOfBoundsException ai)
+		{
+			System.out.println("Inside parent try block: "+ai);
+		}
+		catch (Exception e) {
+			System.out.println("Exception: "+e);
+		}
+	}
+
+}

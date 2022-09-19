@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="package1.class2"/>
     <fullyQualifiedTypeName name="package1.class1"/>
     <fullyQualifiedTypeName name="session1.oops.Person"/>
     <fullyQualifiedTypeName name="session2.association.Sportsperson"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="session2.association.Organization"/>
-    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
     <fullyQualifiedTypeName name="session2.polymorphism.ArithmeticOperation"/>
     <fullyQualifiedTypeName name="session2.polymorphism.Employee"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="session3.Vodafone"/>
+    <fullyQualifiedTypeName name="session3.Airtel"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="session3.SMSSender"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="session3.FlighManager"/>
+    <fullyQualifiedTypeName name="session3.FlightService"/>
+    <fullyQualifiedTypeName name="session3.DefaultMethodInInterfaceDemo"/>
+    <fullyQualifiedTypeName name="session3.MyInterface"/>
+    <fullyQualifiedTypeName name="session3.MyInterface2"/>
+    <fullyQualifiedTypeName name="session3.MultiplrInterfaceDemo"/>
+    <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
+    <fullyQualifiedTypeName name="session3.functional_interface"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="session3.exception.CustomExceptionDemo"/>
+    <fullyQualifiedTypeName name="session3.exception.InvalidProductException"/>
+    <fullyQualifiedTypeName name="java.lang.AutoCloseable"/>
+    <fullyQualifiedTypeName name="session3.exception.MyResource1"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="session3.exception.MyResource2"/>
 </qualifiedTypeNameHistroy>

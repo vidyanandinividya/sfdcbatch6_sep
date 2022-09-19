@@ -1,0 +1,33 @@
+package session3.exception;
+
+public class MultipleCatchDemo {
+
+	public static void main(String[] args) {
+		try
+		{
+			int arr[]=new int[7];
+			arr[8]=30/0;
+			System.out.println("Last statement of try block");
+		}
+		/*catch(ArithmeticException ae)
+		{
+			System.out.println("You should not divide a number by zero");
+		}
+		catch(ArrayIndexOutOfBoundsException ai)
+		{
+			System.out.println("Accessing array elements outside of the limit");
+		}
+		catch(Exception e)
+		{
+			System.out.println("Some other exception");
+		}
+		System.out.println("out of the try-catch block");*/
+		catch(ArithmeticException|ArrayIndexOutOfBoundsException ai)
+		{
+			System.out.println("You should not divide a number by zero");
+			System.out.println(ai);
+		}
+
+	}
+
+}

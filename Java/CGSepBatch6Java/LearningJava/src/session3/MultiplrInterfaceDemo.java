@@ -1,0 +1,54 @@
+package session3;
+interface MyInterface1
+{
+	void existingMethod(String str);
+	default void newMethod()
+	{
+		System.out.println("Newly added default method in MyInterface1");
+	}
+}
+interface MyInterface2
+{
+	void disp(String str);
+}
+interface MyInterface3 extends MyInterface2
+{
+	void greet(String str);
+	default void newMethod()
+	{
+		System.out.println("Newly added default method in MyInterface3");
+	}
+}
+public class MultiplrInterfaceDemo implements MyInterface1,MyInterface3{
+
+	public static void main(String[] args) {
+		MultiplrInterfaceDemo obj=new MultiplrInterfaceDemo();
+		obj.newMethod();
+
+	}
+
+	@Override
+	public void disp(String str) {
+		System.out.println("Display String is :"+str);
+		
+	}
+
+	@Override
+	public void existingMethod(String str) {
+		System.out.println("STring is :"+str);
+		
+	}
+
+	@Override
+	public void greet(String str) {
+		System.out.println("Greet :"+str);
+		
+	}
+
+	@Override
+	public void newMethod() {
+		System.out.println("Implemenation of default method");
+		
+	}
+
+}

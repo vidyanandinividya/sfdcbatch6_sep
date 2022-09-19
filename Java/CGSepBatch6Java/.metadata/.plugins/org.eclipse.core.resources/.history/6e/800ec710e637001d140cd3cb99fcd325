@@ -1,0 +1,14 @@
+package session3;
+
+interface functional_interface
+{
+	void calc(int num1,int num2);
+}
+public class FunctionalInterfaceDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

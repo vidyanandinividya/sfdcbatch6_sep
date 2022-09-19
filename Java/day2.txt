@@ -121,3 +121,116 @@ OOPS Concept
                 4. Arguments/ parameters of method
                 5. Exception that method throws
     Abstraction
+        An abstraction is a process of exposing all the necessary details and hiding rest.
+        We can implement the abstraction in two ways
+            Abstract Class (0 to 100% abstraction)
+                abstract class A{}
+                abstract method 
+                    the method without body
+                        abstract void fn1();
+            The class has to be declared abstract if it conatins at least one abstract method.
+            An abstract class is a class whose object can't be created.It is used to represent a concept
+
+            abstract class A 
+            {
+                abstract void fn1(); //set of rules which is implemented in child class
+            }
+
+            A obj=new A();
+        When to use Abstract Class
+            we want to start a service like Bulk SMS sender,
+            where we take the orders from various Telecome vendors like Airtel, Vodafone
+
+            abstract class 
+                some methods I know
+
+            Implementor 1 
+                some methods I don't know it will give the implemenation of that method
+            
+            Methods we know :
+                sendSMS()
+                checkForDND()
+                checkForTelecomeRules()
+            Methods we don't know   
+            establishConnectionWithYourTower()
+            disconnectConnectionWithYourTower()
+    Abstract class is used when you know partial implemenation.
+            Interface (100% abstraction)
+                An interface provides specifications of what a class should do or not and how it should do.
+                basically interface has a set of methods that class may or may not apply.
+            Let's say we want to start a serive like "makemytrip.com", where we are responsible for displaying the flights from various flight service company and place order from the customer.
+                1. Displaying flights avaialble from vendors like "AirIndia" and "Indigo"
+                2. Place and order for seat to respective vendor.
+                getAllFlights()
+                doBooking();
+            Interface
+                I only know method names that I will require for my job to be done.
+                you will have to provide body for those methods.
+            Interface is used when you want to define a contract and you don't know anything about implemenation. (here it is total abstraction as you don't know anything)
+                Interface helps in achieving dynamic polymorphism because it focus only on capabilities and don't care about implemenation which implemented class MUST take care of as define in interface contract.
+            JAVA 8 Interface
+                introduce the use of default and static method in interface.
+                default method 
+                    this  method in interface is to allow the developers to add new methods to the interface without affecting the classes that implement these interfaces.
+                static method
+                    these methods in interface are similar to the default methods except that we cannot override these methods in the classes that implements these interface.
+                Functional Interface
+                    An interface with exactly one abstract method 
+                    @FunctionalInterface annotation to avoid accidental addition of abstract methods in the Functional Interface
+            Lambda Expression
+                These are the way through which we can visulaize functional programming in the Java.
+                A lambda expression is an annonymous function.
+                A function that doesn't have a name and doesn't belong to any class
+            Syntax
+                (parameter_list)->{function_body}
+            Lambda expression Vs Method
+            A method has
+                Name
+                Parameter list
+                body
+                return type
+            A lambda expression has
+                No name 
+                parameter list
+                body 
+                no return type
+            It can be used only in functional interface 
+CC #1
+    reverse a string using functional programming
+        1. create functional interface
+            //abstract function  which accept the string array
+        2. use the lambda expression to reverse the string
+Exception Handling
+    An exception is an unwanted event that interrupts the normal flow of the program.
+    Exception Handling ensures that the flow of the program doesn't break when an exception occurs.
+
+    Error 
+        indicate that something went wrong which is not in the scope of a programmer to handle.
+    Exception   
+        are events that occurs during runtime due to bad data entered by user or an error in programming logic.
+
+    Throwable is the superclass of error and exception
+
+    Types of Exception
+        checked exception
+            if these exceptions are not handled/declared in the program, you will get compilation error.
+            SQLException, IOException, ClassNotFoundException
+        unchecked exception
+            These exceptions are not checked at compile-time
+            ArithmeticException, NullPointerException
+    Handling Exception
+        try block
+            try block contains set of statements where an exception can occur.
+            it always followed by a catch block or finally block.
+            if exception occurs, the rest of the statements in the try block are skipped and the flow immediately jumps to the corresponding catch block.
+        catch block 
+            It is the place wher exception get handled.
+            A single try block can have multiple catch block
+        finally 
+            this block executes whether an exception occurs or not.
+            In normal case when there is no exception in try block then finaly block is executed after try block. However if an exception occurs then the catch block is executed before finally block
+        Custom Exception
+            Custom exception is created by extending the class form Exception class
+
+            
+            

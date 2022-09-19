@@ -1,0 +1,19 @@
+package session3.exception;
+
+import java.util.Scanner;
+
+public class ExceptionDemo {
+
+	public static void main(String[] args) {
+		int num1,num2;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter first number (dividend)");
+		num1=sc.nextInt();
+		System.out.println("Enter second number(divisor)");
+		num2=sc.nextInt();
+		int div=num1/num2;
+		System.out.println("Quotient:"+div);
+
+	}
+
+}
