@@ -1,0 +1,88 @@
+Collections
+    These are like containers that group multiple items in a single unit.
+    java.util.Collection -- root interface
+    Generics provide the type safety
+    Iterator
+        This interface allows to access the elements of a collection 
+        All the Java collections include an iterator() method.
+        This method returns an instance of iterator used to iterate over elements of collections.
+        This interface provides 4 methods
+            hasNext() - returns true if there exists an element in the collection
+            next() - return the next element of the collection
+            remove() - remove the last element return by the next()
+            forEachRemaining() - performs the specified action for each remaining element of the collection
+    Collections and Java Stream
+        A coolection is an in-memory data structure to hold values and before we start using collection, all the values should have been populated.
+        whereas a Java Stream is a data structure that is computed on-demand.
+        Stream doesn't store data, it operates on the source data structure (collection and array).
+        designed for lambdas
+        do not support indexed access
+    Predicate
+        functional interface which accepts an argument and returns a boolean value.
+        it used to apply filter for a coolection of objects.
+    Intermediate operation
+        This operation return the stream itself so you can chain multiple method calls in a row.
+        filter - for condition
+            It accepts a Predicate to filter all elements of the stream.
+            This operation is intermediate which enables us to call another stream operation (forEach()) on the result
+        map - for calculation
+            It converts each element in the stream into another object via the given function.
+        sorted - used for sorting
+            It returns a sorted view of the stream.
+            The elements in the stream are sorted in natural order unless you pass a custom comparator.
+        
+    Terminal operation
+        It return a result of a certain type after processing all the stream elements
+    forEach
+        It helps in iterating over all elements of a stream and perform some operation on each of them.
+    collect 
+        This method is used to receive elements from a stream and store them in a collection.
+    match
+        This operations can be used to check whether a given predicate matches the stream elements or not
+    count
+        it returns the number of elements in the stream as a long value.
+    reduce 
+        It performs a reduction on the elements of the stream with the given function.
+        The result is an Optional holding the reduced value.
+    Collection  
+        Set
+        List
+        Queue
+        Deque
+    List interface
+        This interface can contain duplicate elements and is implemented by classes
+            ArrayList
+            LinkedList
+            Vector
+            Stack
+    Set interface
+        It represent a collection of unique elements.
+        sets do not allow duplicate elements
+        it does not provides a guarantee to return the elements in any predictable order.
+        It is implemented by classes
+            HashSet
+            TreeSet
+            LinkedHashSet
+    Map interface
+        It enables to store data in key-value pairs (keys should be immutable).
+        It cannot contain duplicate keys
+        each key can map to at most one value.
+            - set of keys
+            -collection of values
+            - set of key-value mappings
+        It is implemented by classes
+            HashMap
+            TreeMap
+            LinkedHashMap
+Comparator interface
+    It imposes a total ordering on the objects which may not have a desired natural ordering.
+        - Sorting the array or list of objects, but not in natural order
+        - using group by sort on list or array of objects on multiple different fields.
+    need to override compare(T o1, T o2)
+
+    o1 > o2 -- negative
+    o1==o2 -- zero
+    o1<o2 --positive
+IO operation    
+File 
+    It is nothing but storage of data items.
