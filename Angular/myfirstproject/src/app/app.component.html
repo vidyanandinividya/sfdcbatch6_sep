@@ -1,0 +1,13 @@
+<!--<h1>This is my First Angular Project</h1>
+<app-first></app-first>
+<app-second></app-second>-->
+<!--<h2>{{title}}</h2>
+<h3>Passing data from parent to child</h3>
+<app-child [parentData]="name"></app-child>
+<hr>-->
+<!--<h3>Passing data from child to parent</h3>
+<h2>{{message}}</h2>
+<app-child (childEvent)="message=$event"></app-child>-->
+
+<h2>{{message}}</h2>
+<app-child (childEvent)="message=$event" [parentData]="name"></app-child>

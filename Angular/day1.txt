@@ -1,0 +1,105 @@
+Angular
+    Angular is a JavaScript Framework which allows you to create reactive Single-Page-Applications (SPAs)
+To install Angular
+    npm install -g @angular/cli 
+    ng help
+
+To create the project
+    ng new projectname --skip-git
+    code .
+SPAs 
+    It is a website or web application that dynamically rewrites a current web page with new data from the web server, instead of the default method of a web browser loading entire new pages.
+TypeScript
+    This is just a superset of JavaScript
+    TypeScript doesn't run in the browser, so it's compiled to JavaScript in the end.
+    The compilation is handled by the CLI
+Component
+A Component consists of three things
+    A component class (.ts) - Handles data and functionality
+        A typescript class that defines the behaviour
+    An HTML Template    - determines the UI
+        it defined the UI (what renders on the page)
+    Component specific styles - Define the look and feel
+        It defines how the component is used in a template
+ngModule
+    This decorator is a function that takes a single metadata object, whose properties describe the module.
+    It helps us to organize the application parts into cohesive blocks of functionality.
+    Each block focuses on providing a specific functionality or feature.
+    declarations:[]
+        this is where components, directives or pipes that belong to this module are declared
+    imports: []
+        the module declaration goes here
+    exports: []
+        the export components goes here
+    providers: []
+        the service declaration goes here
+    bootstrap: []
+        The main component of this module, which needs to be loaded when the module is loaded specified here.
+
+    Component   
+        The component is the main building block of an Angular application.
+        A component contains the definition of the view and the data that defines how the view looks and behaves
+            ng generate component componentname
+            ng g c componentname
+        Every component has 4 files auto-generated with it
+            component.html 
+                view or html or template file -> UI
+            component.ts 
+                it will be a class file which will have methods --> Logic
+            component.css 
+                style of the view
+            component.spec.ts
+                It will have the unit test script for component
+        component decorator inside the component.ts file
+            selector 
+                unique identifier for the component
+                    -> id of the component
+                    -> using this selector we will use this component
+            templateUrl 
+                html file which render when you use this component
+            styleUrls
+                for linking your component stylesheet.
+CC#1
+    Create two components (manually or with CLI) WarningAlert and SuccessAlert
+    Output them beneath each other in the AppComponent
+    Output a Warning and Success message in the components
+    Style the components appropriately 
+
+    Use external,internal template and style
+Data Binding
+    Means to bind the data from view (Template) to Controller (Component) and vice versa
+Types of Data Binding
+    One-way Data Binding
+        data flows only in one direction
+        i.e from component to view
+            Interpolation or String Interpolation
+                It is used to return HTML output from TypeScript code
+                {{}}
+            Property Binding
+                It is used to set the property of a view element
+                It involves updating the value of a property in the component and binding it to an element in the view template
+            Event Binding
+                It is used when information flows from the view to the component when an event is triggered.
+    Two-way Data Binding
+        allows your application to share data in two directions 
+        i.e from the component to template and vice versa
+        It performs two things  
+            setting of the element property and listening to the element change events.
+            [()] - property binding + event binding
+CC#2
+   - Add a input field which updates a property (username) via two way binding
+   - Output the username property via string Interpolation in paragraph below the input
+   - Add a button which may only be checked if the username us NOT an empty string
+   - Upon clicking the button, the username should be reset to an empty string
+
+Sharing Data between Component
+    @Input()
+        lets a parent component update data in child component
+    @Output()
+        lets the child send data to a parent component
+Sending data to a child component
+    @Input() in child component
+Sending data to parent component
+    @Output() in child component
+
+
