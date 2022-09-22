@@ -1,0 +1,22 @@
+<h1>Directive Demo</h1>
+<!--<app-test></app-test>-->
+<!--<app-exercise></app-exercise>-->
+<button (click)="onlyOdd=!onlyOdd"> show Odd/Even numbers</button>
+<ul>
+<div *ngIf="onlyOdd">
+  <li style="list-style-type: none;"
+  [ngClass]="{odd:odd%2!==0}"
+  [ngStyle]="{backgroundColor:odd%2!==0?'yellow':'red'}"
+  *ngFor="let odd of oddNumbers">{{odd}}</li>
+</div>
+  <div *ngIf="!onlyOdd">
+    <li style="list-style-type: none;"
+    [ngClass]="{even:even%2==0}"
+    [ngStyle]="{backgroundColor:even%2!==0?'yellow':'red'}"
+    *ngFor="let even of evenNumbers">{{even}}</li>
+  </div>
+</ul>
+<p appBasicHighlightDirective>Style me with Basic Directive</p>
+<div appBasicHighlightDirective>Hello </div>
+<p appBetterHighlightDirective>Style me with Better Directive</p>
+<p appBetterHighlightDirective [defaultColor]="'yellow'" [highlightColor]="'green'">Style me with Better Directive</p>

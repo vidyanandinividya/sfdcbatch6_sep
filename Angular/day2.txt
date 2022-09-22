@@ -1,0 +1,50 @@
+Directive
+    These are instructions in the DOM
+    It is a way to extend our HTML including both view as well as behaviour
+    Mainly 3 types of Directives
+        Component Directive
+        Structural Directive
+            ngIf
+            ngFor
+            ngSwitch
+        asterisk (*) means its a built in structural directive
+        Attribute Directuve
+            ngClass
+            ngStyle
+        custom Directive
+            ng g d directivename
+#CC 1
+    Add a button which says "Display Details"
+    Add a paragraph with any content of your choice ("secret passowrd=true")
+    Toggle the displaying of that paragraph with the button created in the first step
+    Log all the button clicks in an array and output that array below the secret paragraph (may be log a timstamp or simply an increasing number)
+    starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color (ngClass)
+Forms
+    vital for business application
+    create an experience that guides the user efficiently and effectively through the workflow
+
+    Template Driven Form (TDF)
+        Heavy on the component template
+        Easy to use and similar to HTML Forms
+        two way data binding with ngModel
+        Bulky HTML and minimal component code
+        Automatically tracks the form and form elements state and validity
+        Unit testing is challenge
+        Readability decreases with complex forms and validations
+        Suitable simple scenarios
+
+        state                                class if true       class if false
+        The control has been visited            ng-touched          ng-untouched
+        The control's value has changed         ng-dirty            ng-pristine
+        The control's value is valid            ng-valid            ng-invalid
+
+        ngModel Properties
+        class               Property
+        ng-untouched        untouched
+        ng-touched          touched
+        ng-pristine         pristine
+        ng-dirty            dirty
+        ng-valid            valid
+        ng-invalid          invalid
+    Reactive Forms (RF)
+        Heavy on the component class 
