@@ -1,0 +1,94 @@
+Pipe
+    These are used to transfer data before displaying them in the view
+    - built in Pipe
+    - custom Pipe
+        ng g pipe pipename
+Service
+    Principle
+        DO Not Repeat Yourself (DRY)
+        Single Responsibility Priniciple
+Service
+    A class with a specific purpose
+
+    Share date
+    Implement application logic
+    External interaction
+
+.service.ts 
+    ng g servcie servcieName
+
+code without DI 
+
+class Engine
+{
+    constructor(){}
+}
+class Engine
+{
+    constructor(newparameter){}
+}
+class Tires
+{
+    constructor(){}
+}
+class Car
+{
+    engine;
+    tires;
+    constructor()
+    {
+        this.engine=new Engine(); //error
+        this.tires=new Tires()
+    }
+}
+Dependency Injection 
+    DI is a coding pattern in which a class receives its dependencies from external sources rather than creating them itself
+
+code with DI
+class Car
+{
+    engine;
+    tires;
+    constructor(engine,tyre)
+    {
+        this.engine=engine
+        this.tires=tyre
+    }
+}
+var myEngine=new Engine();
+var myTires=new Tires();
+var myCar=new Car(myEngine,myTires)
+
+var myEngine=new Engine(parameter);
+var myTires=new Tires();
+var myCar=new Car(myEngine,myTires)
+
+DI as a Framework
+    Define the EmployeeService class
+    Register with Injector
+    Decalre as dependency in EmpList adn EmpDetails
+
+        EmployeeService   -- Injector -- Get -- Http -- server
+         the respone is in the form of Obeservable
+Obeservable
+    It is a sequence of items that arrived asynchnously over time
+    HTTP call - single items
+    single item - HTTP response
+
+HTTP, Observables and RxJS
+    1. HTTP Get request from EmpService 
+    2. Receive the observable and cast it into an employee array
+    3. subscribe to the obseravble from EmpList and EmpDetails
+    4. Assign the employee array to a local variable
+
+    HTTP methods
+        To fetch the data - Get
+        To create the data - Post
+        To update the data - Put
+        to delete the data - Delete
+
+    RxJS
+        Reactive Extensions for JavaScript
+        External library to work with observables
+        EmpList
+        EMpDetails

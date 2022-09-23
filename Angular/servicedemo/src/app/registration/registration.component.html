@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <h1>Employee Registration Form</h1>
+    <form #userForm="ngForm"  (ngSubmit)="onSubmit()" novalidate>
+      <div class="form-group">
+        <label>Id</label>
+        <input type="text" required #name="ngModel" class="form-control" name="id" [(ngModel)]="emp.id">
+      </div>
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" name="name" [(ngModel)]="emp.name">
+      </div>
+      <div class="form-group">
+        <label>Age</label>
+        <input type="text" class="form-control"  name="email" [(ngModel)]="emp.age">
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Add Employee</button>
+      
+    </form>
+    <button type="submit" class="btn btn-secondary" (click)="getUser()">View Employee</button>
+    <ul *ngFor="let employee of empList" style="list-style-type: none;">
+      <li>{{employee.id}}.{{employee.name}} - {{employee.age}}</li>
+      <button type="submit" class="btn btn-danger" (click)="deleteEmployee(employee.id)">Delete</button>
+      <button type="submit" class="btn btn-success">Update</button>
+     </ul>
+
+  </div>
